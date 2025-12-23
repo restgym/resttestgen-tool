@@ -1,0 +1,8 @@
+FROM eclipse-temurin:17-jre-jammy AS runtime
+
+COPY ./tools/resttestgen/resttestgen-v25.12.jar /app/app.jar
+COPY ./tools/resttestgen/entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
