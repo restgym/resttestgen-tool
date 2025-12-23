@@ -8,10 +8,5 @@ echo "host: http://$HOST:$PORT" >> /apis/restgym-api/api-config.yml
 
 # Start RestTestGen in a loop
 while true; do
-    st run "/specifications/${API}-openapi.json" \
-        --url "http://${HOST}:${PORT}" \
-        --max-examples 1500 \
-        --continue-on-failure \
-        --suppress-health-check all \
-        --no-shrink; \
+    java -jar /app/app.jar -a restgym-api
 done
