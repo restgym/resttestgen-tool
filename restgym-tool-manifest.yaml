@@ -1,0 +1,30 @@
+# RESTgym tool manifest
+manifest_version: 1
+
+id: resttestgen
+name: RestTestGen
+version: "25.12"                  # resttestgen-v25.12.jar
+description: A framework for automated black-box testing of RESTful APIs.
+license: Apache-2.0
+repository: https://github.com/SeUniVr/RestTestGen
+homepage: https://seunivr.github.io/RestTestGen-Wiki/
+authors:
+  - name: Davide Corradini
+    affiliation: University of Verona
+    orcid: 0009-0009-2594-4562
+  - name: Amedeo Zampieri
+    affiliation: University of Verona
+    # orcid:
+  - name: Michele Pasqua
+    affiliation: University of Verona
+    orcid: 0000-0002-9475-4836
+  - name: Mariano Ceccato
+    affiliation: University of Verona
+    orcid: 0000-0001-7325-0316
+citation:
+  doi: 10.1109/ICSME55016.2022.00068   # ICSME 2022 (framework); testing strategies: 10.1002/stvr.1808 (STVR 2022)
+
+compatibility:
+  openapi_versions: ["3.0"]       # README: "Custom parser for OpenAPI (v3) specifications"
+  spec_formats: [json]            # entrypoint.sh reads /specifications/${API}-openapi.json
+  budgets: [time]
